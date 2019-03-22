@@ -1,0 +1,25 @@
+#Analyzing the DataFrame
+
+import codecademylib
+import pandas as pd
+from matplotlib import pyplot as plt
+
+# Load the Data
+species = pd.read_csv('species_info.csv')
+
+# Print first 5 records 
+print species.head()
+
+# Inspect the DataFrame
+species_count = species.scientific_name.nunique()
+
+species_type = species.category.unique()
+
+conservation_statuses = species.conservation_status.unique()
+
+# Analyze Species Conservation Status
+conservation_counts = species.groupby('conservation_status').scientific_name.nunique().reset_index()
+
+print conservation_counts
+
+species.fillna('No Intervention', inplace = True)

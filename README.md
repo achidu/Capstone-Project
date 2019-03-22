@@ -1,5 +1,4 @@
 # Capstone-Project
-Introduction to Data Analysis
 
 For this project, you’ll act as a data analyst for the National Park Service. You’ll be helping them analyze data on endangered species from several different parks.
 

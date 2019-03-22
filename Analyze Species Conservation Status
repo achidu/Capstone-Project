@@ -20,8 +20,11 @@ conservation_counts = species.groupby('conservation_status').scientific_name.nun
 
 print conservation_counts
 
+# Some species don't need any intervention, but we still want to inlcude them in our counts; use fillna
+
 species.fillna('No Intervention', inplace = True)
 
 conservation_counts_fixed = species.groupby('conservation_status').scientific_name.nunique().reset_index()
 
 print (conservation_counts_fixed)
+

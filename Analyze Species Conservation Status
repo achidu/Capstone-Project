@@ -1,12 +1,14 @@
+# Count how many of each species fall into each of the 4 conservation statuses.
+
 import codecademylib
 import pandas as pd
 from matplotlib import pyplot as plt
 
-# Loading the Data
+# Load the Data
 species = pd.read_csv('species_info.csv')
 
 
-# Inspecting the DataFrame
+# Inspect the DataFrame
 species_count = species.scientific_name.nunique()
 
 species_type = species.category.unique()
